@@ -18,7 +18,10 @@ class DropBottleViewModel: ObservableObject {
             request.httpMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
-            let message = Bottle(message: title)
+            let message = Bottle(
+                message: title,
+                sender: "Anonymous",
+                timestamp: Date().timeIntervalSince1970 * 1000)
             let encoder = JSONEncoder()
             guard let jsonData = try? encoder.encode(message) else {
                 return

@@ -39,7 +39,7 @@ struct MainView: View {
                 DropBottleView(toDropBottle: $viewModel.toDropBottle)
             }
             .sheet(isPresented: $viewModel.didPickupBottle, content: {
-                PickupBottleView(message: viewModel.bottle?.message ?? "Nothing")
+                PickupBottleView(bottle: viewModel.bottle!)
             })
         }
     }

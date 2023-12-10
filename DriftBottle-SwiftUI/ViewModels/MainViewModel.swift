@@ -23,7 +23,6 @@ class MainViewModel: ObservableObject {
                 if let safeData = data {
                     if let bottle = Bottle.parseJSON(safeData) {
                         DispatchQueue.main.async {
-                            print(self.bottle?.message ?? "none")
                             self.bottle = bottle
                             self.didPickupBottle = true
                         }
