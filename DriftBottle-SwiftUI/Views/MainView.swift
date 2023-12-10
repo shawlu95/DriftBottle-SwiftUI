@@ -20,26 +20,13 @@ struct MainView: View {
             VStack {
                 Spacer()
                 
-                Button("Drop a Bottle") {
+                DBButton(title: "Drop a Bottle") {
                     viewModel.dropBottle(message: "TEST")
                 }
-                .frame(width: 600)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.blue.opacity(0.7))
-                .padding(.bottom, 20)
                 
-                Button("Pickup a Bottle") {
+                DBButton(title: "Pickup a Bottle") {
                     viewModel.pickupBottle()
                 }
-                .frame(width: 600)
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.blue.opacity(0.7))
-                .padding(.bottom, 20)
-
             }
             .padding()
         }
