@@ -16,7 +16,7 @@ struct DBButton: View {
             action()
         }
         .frame(width: UIScreen.main.bounds.width - 40)
-        .font(.headline)
+        .font(.custom("chalkduster", size: 16))
         .foregroundColor(.white)
         .padding()
         .background(Color.blue.opacity(0.7))

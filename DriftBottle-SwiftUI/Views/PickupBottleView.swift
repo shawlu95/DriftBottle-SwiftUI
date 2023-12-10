@@ -10,25 +10,37 @@ import SwiftUI
 struct PickupBottleView: View {
     var bottle: Bottle
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(bottle.message)
+        ZStack {
+            Image("paper")
+                .resizable()
+                .scaledToFill()
+                .frame(
+                    width: UIScreen.main.bounds.width,
+                    height: UIScreen.main.bounds.height)
+                .ignoresSafeArea()
+                .opacity(0.5)
+            
+            VStack(alignment: .leading) {
+                Text(bottle.message)
+                    .padding()
+                
+                HStack {
+                    Text("from:")
+                        .bold()
+                    Text(bottle.sender!)
+                }
                 .padding()
-            
-            HStack {
-                Text("from:")
-                    .bold()
-                Text(bottle.sender!)
+                
+                HStack {
+                    Text("date:")
+                        .bold()
+                    Text("\(Date(timeIntervalSince1970: bottle.timestamp! / 1000).formatted(date: .abbreviated, time: .shortened))")
+                }
+                .padding()
             }
-            .padding()
-            
-            HStack {
-                Text("date:")
-                    .bold()
-                Text("\(Date(timeIntervalSince1970: bottle.timestamp! / 1000).formatted(date: .abbreviated, time: .shortened))")
-            }
+            .font(.custom("chalkduster", size: 16))
             .padding()
         }
-        .padding()
         
     }
 }
