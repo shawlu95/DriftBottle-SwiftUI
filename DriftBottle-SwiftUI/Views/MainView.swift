@@ -39,7 +39,7 @@ struct MainView: View {
             }
             .sheet(isPresented: $viewModel.didPickupBottle, content: {
                 if $viewModel.bottle.wrappedValue != nil {
-                    PickupBottleView(bottle: viewModel.bottle!)
+                    PickupBottleView(viewModel: viewModel)
                 }
             })
             .alert(isPresented: $viewModel.showAlert) {

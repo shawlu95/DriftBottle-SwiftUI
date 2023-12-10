@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DropBottleView: View {
-    @StateObject var viewModel: DropBottleViewModel = DropBottleViewModel()
+    @ObservedObject var viewModel: DropBottleViewModel = DropBottleViewModel()
     @Binding var toDropBottle: Bool
     var body: some View {
         ZStack {

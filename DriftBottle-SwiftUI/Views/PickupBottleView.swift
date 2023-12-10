@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PickupBottleView: View {
-    var bottle: Bottle
+    @ObservedObject var viewModel: MainViewModel
     var body: some View {
         ZStack {
             Image("paper")
@@ -20,20 +20,20 @@ struct PickupBottleView: View {
                 .ignoresSafeArea()
             
             VStack(alignment: .leading) {
-                Text(bottle.message)
+                Text(viewModel.bottle!.message)
                     .padding()
                 
                 HStack {
                     Text("from:")
                         .bold()
-                    Text(bottle.sender!)
+                    Text(viewModel.bottle!.sender!)
                 }
                 .padding()
                 
                 HStack {
                     Text("date:")
                         .bold()
-                    Text("\(Date(timeIntervalSince1970: bottle.timestamp! / 1000).formatted(date: .abbreviated, time: .shortened))")
+                    Text("\(Date(timeIntervalSince1970: viewModel.bottle!.timestamp! / 1000).formatted(date: .abbreviated, time: .shortened))")
                 }
                 .padding()
             }
@@ -46,5 +46,5 @@ struct PickupBottleView: View {
 }
 
 #Preview {
-    PickupBottleView(bottle: Bottle(message: "Hello", sender: "World", timestamp: Date().timeIntervalSince1970))
+    PickupBottleView(viewModel: MainViewModel())
 }
