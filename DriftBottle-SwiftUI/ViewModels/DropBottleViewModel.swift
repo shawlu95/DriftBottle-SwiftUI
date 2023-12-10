@@ -18,7 +18,7 @@ class DropBottleViewModel: ObservableObject {
             request.httpMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
-            let message = Message(message: title)
+            let message = Bottle(message: title)
             let encoder = JSONEncoder()
             guard let jsonData = try? encoder.encode(message) else {
                 return
@@ -31,7 +31,7 @@ class DropBottleViewModel: ObservableObject {
                     return
                 }
                 if let safeData = data {
-                    if let message = Message.parseJSON(safeData) {
+                    if let bottle = Bottle.parseJSON(safeData) {
                         DispatchQueue.main.async {
                             print(message)
                             self.success = true

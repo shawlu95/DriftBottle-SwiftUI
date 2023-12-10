@@ -8,7 +8,7 @@
 import Foundation
 
 class MainViewModel: ObservableObject {
-    @Published var bottle: Message?
+    @Published var bottle: Bottle?
     @Published var toDropBottle: Bool = false
     @Published var didPickupBottle: Bool = false
     
@@ -21,10 +21,10 @@ class MainViewModel: ObservableObject {
                     return
                 }
                 if let safeData = data {
-                    if let message = Message.parseJSON(safeData) {
+                    if let bottle = Bottle.parseJSON(safeData) {
                         DispatchQueue.main.async {
                             print(self.bottle?.message ?? "none")
-                            self.bottle = Message(message: message)
+                            self.bottle = bottle
                             self.didPickupBottle = true
                         }
                     }

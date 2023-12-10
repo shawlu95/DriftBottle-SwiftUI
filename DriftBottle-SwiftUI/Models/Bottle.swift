@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Message: Codable {
+struct Bottle: Codable {
     let message: String
     
-    static func parseJSON(_ data: Data) -> String? {
+    static func parseJSON(_ data: Data) -> Bottle? {
         let decoder = JSONDecoder()
         do {
-            let decoded = try decoder.decode(Message.self, from: data)
-            return decoded.message
+            let decoded = try decoder.decode(Bottle.self, from: data)
+            return decoded
         } catch {
             return nil
         }
