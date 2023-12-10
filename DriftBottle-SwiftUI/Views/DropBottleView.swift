@@ -29,18 +29,19 @@ struct DropBottleView: View {
                 
                 Spacer()
                 
+                if !viewModel.alertMessage.isEmpty && !viewModel.success {
+                    Text(viewModel.alertMessage)
+                        .foregroundColor(.red)
+                }
+                
                 HStack {
                     Text("From:")
-                        .font(.custom("chalkduster", size: 16))
                     TextField("Anonymous", text: $viewModel.sender)
-                        .font(.custom("chalkduster", size: 16))
                 }
                 .padding()
                 
-                
-                TextEditor(text: $viewModel.title)
+                TextEditor(text: $viewModel.message)
                     .frame(minHeight: 200, maxHeight: 200)
-                    .font(.custom("chalkduster", size: 16))
                     .textFieldStyle(.roundedBorder)
                     .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                     .background(.clear)
@@ -57,10 +58,12 @@ struct DropBottleView: View {
                 
                 Spacer()
             }
+            
+            .font(.custom("chalkduster", size: 16))
             .alert(isPresented: $viewModel.success) {
                 Alert(
-                    title: Text("Success"),
-                    message: Text("Drop a bottle successfully"),
+                    title: Text("Thank You"),
+                    message: Text($viewModel.alertMessage.wrappedValue),
                     dismissButton: .default(Text("OK")) {
                         toDropBottle = false
                     })
