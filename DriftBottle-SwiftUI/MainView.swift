@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @ObservedObject var viewModel: ViewModel = ViewModel()
     var body: some View {
         ZStack {
             Image("background")
@@ -20,7 +21,7 @@ struct MainView: View {
                 Spacer()
                 
                 Button("Drop a Bottle") {
-                    
+                    viewModel.dropBottle(message: "TEST")
                 }
                 .frame(width: 600)
                 .font(.headline)
@@ -30,7 +31,7 @@ struct MainView: View {
                 .padding(.bottom, 20)
                 
                 Button("Pickup a Bottle") {
-                    
+                    viewModel.pickupBottle()
                 }
                 .frame(width: 600)
                 .font(.headline)
