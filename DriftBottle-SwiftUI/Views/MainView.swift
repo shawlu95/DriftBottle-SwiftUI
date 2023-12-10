@@ -19,7 +19,6 @@ struct MainView: View {
                         width: UIScreen.main.bounds.width,
                         height: UIScreen.main.bounds.height)
                     .ignoresSafeArea()
-                    .opacity(0.5)
                 
                 VStack {
                     Spacer()
@@ -39,8 +38,18 @@ struct MainView: View {
                 DropBottleView(toDropBottle: $viewModel.toDropBottle)
             }
             .sheet(isPresented: $viewModel.didPickupBottle, content: {
-                PickupBottleView(bottle: viewModel.bottle!)
+                if $viewModel.bottle.wrappedValue != nil {
+                    PickupBottleView(bottle: viewModel.bottle!)
+                }
             })
+            .alert(isPresented: $viewModel.showAlert) {
+                Alert(
+                    title: Text("Ooops!"),
+                    message: Text($viewModel.alertMessage.wrappedValue),
+                    dismissButton: .default(Text("OK")) {
+                        // automatically set showAlert to false
+                    })
+            }
         }
     }
 }

@@ -12,12 +12,22 @@ class MainViewModel: ObservableObject {
     @Published var toDropBottle: Bool = false
     @Published var didPickupBottle: Bool = false
     
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = ""
+    
     func pickupBottle() {
+        alertMessage = ""
         if let url = URL(string: APIConstants.pickupUrl) {
+            var request = URLRequest(url: url)
+            request.timeoutInterval = 3
+            
             let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
-                guard error == nil else {
-                    print("error: \(String(describing: error))")
+            let task = session.dataTask(with: request) { (data, response, err) in
+                guard err == nil else {
+                    DispatchQueue.main.async {
+                        self.showAlert = true
+                        self.alertMessage = "Found nothing, try again later!"
+                    }
                     return
                 }
                 if let safeData = data {
