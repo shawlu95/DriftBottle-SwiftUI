@@ -48,11 +48,11 @@ struct DropBottleView: View {
                     .cornerRadius(10)
                     .padding()
                 
-                DBButton(title: "Send") {
+                DBButton(title: "Send", backgroundColor: .blue) {
                     viewModel.dropBottle()
                 }
                 
-                DBButton(title: "Cancel") {
+                DBButton(title: "Cancel", backgroundColor: .gray) {
                     toDropBottle = false
                 }
                 

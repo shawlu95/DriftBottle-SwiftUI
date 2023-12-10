@@ -9,24 +9,27 @@ import SwiftUI
 
 struct DBButton: View {
     let title: String
+    let backgroundColor: Color
     let action: () -> Void
     
     var body: some View {
-        Button(title) {
+        Button(action: {
             action()
+        }) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(backgroundColor)
+                Text(title)
+                    .font(.custom("chalkduster", size: 16))
+                    .foregroundColor(.white)
+            }
         }
-        .frame(width: UIScreen.main.bounds.width - 40)
-        .font(.custom("chalkduster", size: 16))
-        .foregroundColor(.white)
-        .padding()
-        .background(Color.blue.opacity(0.7))
-        .cornerRadius(10)
-        .padding(.bottom, 10)
-    }
-}
+        .frame(width: UIScreen.main.bounds.width - 40, height: 50)
+        .opacity(0.9)
+    }}
 
 #Preview {
-    DBButton(title: "Button") {
+    DBButton(title: "Button", backgroundColor: .blue) {
         // pass
     }
 }

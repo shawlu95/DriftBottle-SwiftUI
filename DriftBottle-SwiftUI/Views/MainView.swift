@@ -23,11 +23,11 @@ struct MainView: View {
                 VStack {
                     Spacer()
                     
-                    DBButton(title: "Drop a Bottle") {
+                    DBButton(title: "Drop a Bottle", backgroundColor: .blue) {
                         viewModel.toDropBottle = true
                     }
                     
-                    DBButton(title: "Pickup a Bottle") {
+                    DBButton(title: "Pickup a Bottle", backgroundColor: .blue) {
                         viewModel.pickupBottle()
                     }
                     .padding(.bottom, 50)
