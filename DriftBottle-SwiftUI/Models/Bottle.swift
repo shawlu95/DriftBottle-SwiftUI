@@ -9,8 +9,8 @@ import Foundation
 
 struct Bottle: Codable {
     let message: String
-    let sender: String
-    let timestamp: TimeInterval
+    let sender: String?
+    let timestamp: TimeInterval?
     
     static func parseJSON(_ data: Data) -> Bottle? {
         let decoder = JSONDecoder()

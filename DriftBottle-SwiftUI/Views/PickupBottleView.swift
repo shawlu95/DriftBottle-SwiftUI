@@ -17,14 +17,14 @@ struct PickupBottleView: View {
             HStack {
                 Text("from:")
                     .bold()
-                Text(bottle.sender)
+                Text(bottle.sender!)
             }
             .padding()
             
             HStack {
                 Text("date:")
                     .bold()
-                Text("\(Date(timeIntervalSince1970: bottle.timestamp / 1000).formatted(date: .abbreviated, time: .shortened))")
+                Text("\(Date(timeIntervalSince1970: bottle.timestamp! / 1000).formatted(date: .abbreviated, time: .shortened))")
             }
             .padding()
         }
