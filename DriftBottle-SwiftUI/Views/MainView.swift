@@ -15,6 +15,9 @@ struct MainView: View {
                 Image("background")
                     .resizable()
                     .scaledToFill()
+                    .frame(
+                        width: UIScreen.main.bounds.width,
+                        height: UIScreen.main.bounds.height)
                     .ignoresSafeArea()
                     .opacity(0.5)
                 

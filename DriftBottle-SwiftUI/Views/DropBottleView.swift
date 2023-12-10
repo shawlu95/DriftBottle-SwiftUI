@@ -15,23 +15,23 @@ struct DropBottleView: View {
             Text("Drop a Bottle")
                 .bold()
                 .font(.system(size: 32))
-                .padding(.top, 100)
+                .padding(.top, 70)
             
             Spacer()
-            TextField("Message", text: $viewModel.title)
-                .padding() 
-                .frame(height: 250)
+            TextEditor(text: $viewModel.title)
+                .frame(minHeight: 200)
+                .textFieldStyle(.roundedBorder)
                 .background(Color.gray.opacity(0.2))
-                .cornerRadius(5)
+                .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/) // To visually delineate the text editor's frame
+                .cornerRadius(10)
                 .padding()
-
+            
             DBButton(title: "Save") {
                 viewModel.dropBottle()
             }
-            .padding()
+
             Spacer()
         }
-        .padding(20)
         .alert(isPresented: $viewModel.success) {
             Alert(
                 title: Text("Success"),

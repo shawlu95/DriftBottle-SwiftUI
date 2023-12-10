@@ -15,11 +15,12 @@ struct DBButton: View {
         Button(title) {
             action()
         }
-        .frame(width: 600)
+        .frame(width: UIScreen.main.bounds.width - 40)
         .font(.headline)
         .foregroundColor(.white)
         .padding()
         .background(Color.blue.opacity(0.7))
+        .cornerRadius(10)
         .padding(.bottom, 20)
     }
 }
