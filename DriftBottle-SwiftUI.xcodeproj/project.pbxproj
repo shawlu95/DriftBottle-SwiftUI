@@ -15,6 +15,8 @@
 		1B8114132B25A9D1005E2C2A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8114122B25A9D1005E2C2A /* MainViewModel.swift */; };
 		1B8114152B25A9F6005E2C2A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8114142B25A9F6005E2C2A /* Message.swift */; };
 		1B81141A2B25B015005E2C2A /* DBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8114192B25B015005E2C2A /* DBButton.swift */; };
+		1B81141C2B25B357005E2C2A /* DropBottleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141B2B25B357005E2C2A /* DropBottleView.swift */; };
+		1B81141E2B25C291005E2C2A /* DropBottleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		1B8114122B25A9D1005E2C2A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		1B8114142B25A9F6005E2C2A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1B8114192B25B015005E2C2A /* DBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBButton.swift; sourceTree = "<group>"; };
+		1B81141B2B25B357005E2C2A /* DropBottleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBottleView.swift; sourceTree = "<group>"; };
+		1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBottleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				1B8114042B25A4FF005E2C2A /* MainView.swift */,
 				1B8114192B25B015005E2C2A /* DBButton.swift */,
+				1B81141B2B25B357005E2C2A /* DropBottleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1B8114122B25A9D1005E2C2A /* MainViewModel.swift */,
+				1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -175,10 +181,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8114052B25A4FF005E2C2A /* MainView.swift in Sources */,
+				1B81141E2B25C291005E2C2A /* DropBottleViewModel.swift in Sources */,
 				1B8114152B25A9F6005E2C2A /* Message.swift in Sources */,
 				1B8114132B25A9D1005E2C2A /* MainViewModel.swift in Sources */,
 				1B81141A2B25B015005E2C2A /* DBButton.swift in Sources */,
 				1B8114032B25A4FF005E2C2A /* DriftBottle_SwiftUIApp.swift in Sources */,
+				1B81141C2B25B357005E2C2A /* DropBottleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
