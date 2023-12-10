@@ -18,6 +18,7 @@
 		1B81141C2B25B357005E2C2A /* DropBottleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141B2B25B357005E2C2A /* DropBottleView.swift */; };
 		1B81141E2B25C291005E2C2A /* DropBottleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */; };
 		1B8114202B25C9EB005E2C2A /* PickupBottleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141F2B25C9EB005E2C2A /* PickupBottleView.swift */; };
+		1B8114222B25D302005E2C2A /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8114212B25D302005E2C2A /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1B81141B2B25B357005E2C2A /* DropBottleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBottleView.swift; sourceTree = "<group>"; };
 		1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBottleViewModel.swift; sourceTree = "<group>"; };
 		1B81141F2B25C9EB005E2C2A /* PickupBottleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupBottleView.swift; sourceTree = "<group>"; };
+		1B8114212B25D302005E2C2A /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				1B8114022B25A4FF005E2C2A /* DriftBottle_SwiftUIApp.swift */,
+				1B8114212B25D302005E2C2A /* APIConstants.swift */,
 				1B8114182B25AFB7005E2C2A /* ViewModels */,
 				1B8114172B25AFB2005E2C2A /* Models */,
 				1B8114162B25AFA9005E2C2A /* Views */,
@@ -185,6 +188,7 @@
 			files = (
 				1B8114052B25A4FF005E2C2A /* MainView.swift in Sources */,
 				1B81141E2B25C291005E2C2A /* DropBottleViewModel.swift in Sources */,
+				1B8114222B25D302005E2C2A /* APIConstants.swift in Sources */,
 				1B8114202B25C9EB005E2C2A /* PickupBottleView.swift in Sources */,
 				1B8114152B25A9F6005E2C2A /* Message.swift in Sources */,
 				1B8114132B25A9D1005E2C2A /* MainViewModel.swift in Sources */,

@@ -31,6 +31,7 @@ struct MainView: View {
                     DBButton(title: "Pickup a Bottle") {
                         viewModel.pickupBottle()
                     }
+                    .padding(.bottom, 50)
                 }
                 .padding()
             }

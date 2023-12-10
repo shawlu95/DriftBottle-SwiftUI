@@ -11,11 +11,9 @@ class DropBottleViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var success: Bool = false
     
-    let baseURL = "http://localhost:8080/api/drift_bottle/v1/"
-    
     func dropBottle() {
         self.success = false
-        if let url = URL(string: baseURL + "drop") {
+        if let url = URL(string: APIConstants.dropUrl) {
             var request = URLRequest(url: url)
             request.httpMethod = "POST"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -33,7 +31,7 @@ class DropBottleViewModel: ObservableObject {
                     return
                 }
                 if let safeData = data {
-                    if let message = self.parseJSON(safeData) {
+                    if let message = Message.parseJSON(safeData) {
                         DispatchQueue.main.async {
                             print(message)
                             self.success = true
@@ -42,16 +40,6 @@ class DropBottleViewModel: ObservableObject {
                 }
             }
             task.resume()
-        }
-    }
-    
-    func parseJSON(_ data: Data) -> String? {
-        let decoder = JSONDecoder()
-        do {
-            let decoded = try decoder.decode(Message.self, from: data)
-            return decoded.message
-        } catch {
-            return nil
         }
     }
 }
