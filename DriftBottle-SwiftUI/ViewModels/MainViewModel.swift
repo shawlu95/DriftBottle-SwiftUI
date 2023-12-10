@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  MainViewModel.swift
 //  DriftBottle-SwiftUI
 //
 //  Created by main on 2023/12/10.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     @Published var bottle: Message?
     @Published var didDropBottle: Bool = false
     @Published var didPickupBottle: Bool = false

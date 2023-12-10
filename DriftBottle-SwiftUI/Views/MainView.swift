@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var viewModel: ViewModel = ViewModel()
+    @ObservedObject var viewModel: MainViewModel = MainViewModel()
     var body: some View {
         ZStack {
             Image("background")
