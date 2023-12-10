@@ -17,6 +17,7 @@
 		1B81141A2B25B015005E2C2A /* DBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8114192B25B015005E2C2A /* DBButton.swift */; };
 		1B81141C2B25B357005E2C2A /* DropBottleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141B2B25B357005E2C2A /* DropBottleView.swift */; };
 		1B81141E2B25C291005E2C2A /* DropBottleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */; };
+		1B8114202B25C9EB005E2C2A /* PickupBottleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81141F2B25C9EB005E2C2A /* PickupBottleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		1B8114192B25B015005E2C2A /* DBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBButton.swift; sourceTree = "<group>"; };
 		1B81141B2B25B357005E2C2A /* DropBottleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBottleView.swift; sourceTree = "<group>"; };
 		1B81141D2B25C291005E2C2A /* DropBottleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBottleViewModel.swift; sourceTree = "<group>"; };
+		1B81141F2B25C9EB005E2C2A /* PickupBottleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupBottleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				1B8114042B25A4FF005E2C2A /* MainView.swift */,
 				1B8114192B25B015005E2C2A /* DBButton.swift */,
 				1B81141B2B25B357005E2C2A /* DropBottleView.swift */,
+				1B81141F2B25C9EB005E2C2A /* PickupBottleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				1B8114052B25A4FF005E2C2A /* MainView.swift in Sources */,
 				1B81141E2B25C291005E2C2A /* DropBottleViewModel.swift in Sources */,
+				1B8114202B25C9EB005E2C2A /* PickupBottleView.swift in Sources */,
 				1B8114152B25A9F6005E2C2A /* Message.swift in Sources */,
 				1B8114132B25A9D1005E2C2A /* MainViewModel.swift in Sources */,
 				1B81141A2B25B015005E2C2A /* DBButton.swift in Sources */,

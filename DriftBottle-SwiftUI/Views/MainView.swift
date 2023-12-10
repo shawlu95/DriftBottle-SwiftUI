@@ -34,6 +34,9 @@ struct MainView: View {
             .sheet(isPresented: $viewModel.toDropBottle) {
                 DropBottleView(toDropBottle: $viewModel.toDropBottle)
             }
+            .sheet(isPresented: $viewModel.didPickupBottle, content: {
+                PickupBottleView(message: viewModel.bottle?.message ?? "Nothing")
+            })
         }
     }
 }
