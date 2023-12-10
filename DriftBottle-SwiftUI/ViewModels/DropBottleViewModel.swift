@@ -9,6 +9,7 @@ import Foundation
 
 class DropBottleViewModel: ObservableObject {
     @Published var title: String = ""
+    @Published var sender: String = ""
     @Published var success: Bool = false
     
     func dropBottle() {
@@ -20,7 +21,7 @@ class DropBottleViewModel: ObservableObject {
             
             let message = Bottle(
                 message: title,
-                sender: "Anonymous",
+                sender: sender,
                 timestamp: Date().timeIntervalSince1970 * 1000)
             let encoder = JSONEncoder()
             guard let jsonData = try? encoder.encode(message) else {

@@ -19,26 +19,40 @@ struct DropBottleView: View {
                     width: UIScreen.main.bounds.width,
                     height: UIScreen.main.bounds.height)
                 .ignoresSafeArea()
-                .opacity(0.5)
             
             VStack {
                 Text("Drop a Bottle")
                     .bold()
                     .font(.custom("chalkduster", size: 24))
+                    .foregroundColor(.black)
                     .padding(.top, 70)
                 
                 Spacer()
+                
+                HStack {
+                    Text("From:")
+                        .font(.custom("chalkduster", size: 16))
+                    TextField("Anonymous", text: $viewModel.sender)
+                        .font(.custom("chalkduster", size: 16))
+                }
+                .padding()
+                
+                
                 TextEditor(text: $viewModel.title)
-                    .frame(minHeight: 200)
+                    .frame(minHeight: 200, maxHeight: 200)
                     .font(.custom("chalkduster", size: 16))
-                    .lineSpacing(25)
                     .textFieldStyle(.roundedBorder)
                     .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    .background(.clear)
                     .cornerRadius(10)
                     .padding()
                 
-                DBButton(title: "Save") {
+                DBButton(title: "Send") {
                     viewModel.dropBottle()
+                }
+                
+                DBButton(title: "Cancel") {
+                    toDropBottle = false
                 }
                 
                 Spacer()

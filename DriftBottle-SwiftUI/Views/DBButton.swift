@@ -21,7 +21,7 @@ struct DBButton: View {
         .padding()
         .background(Color.blue.opacity(0.7))
         .cornerRadius(10)
-        .padding(.bottom, 20)
+        .padding(.bottom, 10)
     }
 }
 

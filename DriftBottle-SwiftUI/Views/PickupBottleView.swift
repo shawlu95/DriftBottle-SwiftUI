@@ -18,7 +18,6 @@ struct PickupBottleView: View {
                     width: UIScreen.main.bounds.width,
                     height: UIScreen.main.bounds.height)
                 .ignoresSafeArea()
-                .opacity(0.5)
             
             VStack(alignment: .leading) {
                 Text(bottle.message)
@@ -39,6 +38,7 @@ struct PickupBottleView: View {
                 .padding()
             }
             .font(.custom("chalkduster", size: 16))
+            .foregroundColor(.black)
             .padding()
         }
         
